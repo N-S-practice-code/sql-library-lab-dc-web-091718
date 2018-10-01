@@ -3,12 +3,13 @@ def select_books_titles_and_years_in_first_series_order_by_year
 end
 
 def select_name_and_motto_of_char_with_longest_motto
-  "SELECT title, year FROM characters ORDER BY gpa DESC LIMIT 1"
+  "SELECT name, motto FROM characters ORDER BY LENGTH(motto) DESC 
+    LIMIT 1"
 end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT value, count FROM characters ORDER BY gpa DESC LIMIT 1"
+  "SELECT species, count FROM characters GROUP BY species"
 end
 
 def select_name_and_series_subgenres_of_authors
